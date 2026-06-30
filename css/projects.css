@@ -1,0 +1,93 @@
+/* -----------------------------------------------------------
+   GALLERY GRID (Collections Page)
+----------------------------------------------------------- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-item {
+  background: rgba(255,255,255,0.05);
+  border: 2px solid rgba(160,82,45,0.25);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  height: 20vh;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.project-link {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-link::after {
+  content: attr(data-title);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, transparent, rgba(0,0,0,0.5));
+  color: var(--accent);
+  padding: 0.5rem;
+  font-family: "Playfair Display", serif;
+  transform: translateY(100%);
+  transition: transform 0.22s ease;
+}
+
+.project-link:hover img,
+.project-link:focus img {
+  transform: scale(1.03);
+  filter: brightness(0.95);
+}
+
+.project-link:hover::after,
+.project-link:focus::after {
+  transform: translateY(0);
+}
+/* -----------------------------------------------------------
+   MODAL (Gallery Preview)
+----------------------------------------------------------- */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.18s ease, visibility 0.18s;
+}
+
+.modal[aria-hidden="false"] {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-content {
+  background: var(--panel);
+  color: var(--text-dark);
+  padding: 1rem;
+  border-radius: 10px;
+  max-width: 720px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  float: right;
+  color: var(--muted);
+  cursor: pointer;
+}

@@ -1,0 +1,272 @@
+/* -----------------------------------------------------------
+   GLOBAL VARIABLES (Color Scheme + Layout)
+----------------------------------------------------------- */
+:root {
+  --bg-dark: #800000;
+  --bg-accent: #4d0000;
+  --panel: #d1c8c9;
+  --muted: #a0522d;
+  --accent: #ffd9b3;
+  --text-light: #f5f5f5;
+  --text-dark: #1b1b1b;
+  --focus: #ffb366;
+  --max-width: 900px;
+}
+
+/* -----------------------------------------------------------
+   BASE STYLES
+----------------------------------------------------------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--bg-dark);
+  background-image: repeating-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.05) 0px,
+      rgba(255, 255, 255, 0.05) 10px,
+      transparent 10px,
+      transparent 20px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(255, 255, 255, 0.05) 0px,
+      rgba(255, 255, 255, 0.05) 10px,
+      transparent 10px,
+      transparent 20px
+    );
+  background-size: 40px 40px;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+/* Skip link for accessibility */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 0.75rem;
+  background: var(--accent);
+  color: var(--bg-dark);
+  border-radius: 6px;
+  z-index: 9999;
+}
+
+/* -----------------------------------------------------------
+   NAVIGATION BAR + DROPDOWN
+----------------------------------------------------------- */
+.site-nav {
+  background-color: var(--bg-accent);
+  padding: 10px 0;
+  border-bottom: 3px solid var(--accent);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.site-nav > ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  padding: 10px 0;
+  margin: 0;
+}
+
+.site-nav a,
+.dropdown-btn {
+  color: var(--accent);
+  text-decoration: none;
+  font-family: "Playfair Display", serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+/* Hover + focus states */
+.site-nav a:hover,
+.site-nav a:focus-visible,
+.dropdown-btn:hover,
+.dropdown-btn:focus-visible {
+  color: white;
+  text-shadow: 0 0 8px var(--accent);
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+}
+
+/* Dropdown button */
+.dropdown-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  position: absolute;
+  top: 2.2rem;
+  left: 0;
+  background-color: var(--bg-accent);
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0;
+  display: none;
+  min-width: 160px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+}
+
+/* Show dropdown */
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu a:focus-visible {
+  background-color: var(--bg-dark);
+  color: white;
+}
+
+/* -----------------------------------------------------------
+   HEADER
+----------------------------------------------------------- */
+.site-header {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.site-title {
+  font-family: "Playfair Display", serif;
+  color: var(--accent);
+  margin: 10px 0;
+  font-size: 3rem;
+  text-align: center;
+  text-shadow: 0 0 8px var(--accent)
+}
+.site-subtitle {
+  font-family: "Playfair Display", serif;
+  color: var(--accent);
+  margin: 10px 0;
+  font-size: 1.5rem;
+  text-align: center;
+  text-shadow: 0 0 8px var(--accent)
+}
+.hero-img {
+  display:inline-block;
+  border-radius: 15px;
+  border: 4px double var(--accent);
+  box-shadow: 0 0 20px rgba(255, 217, 179, 0.4);
+  margin-top: 20px;
+  max-width: 70%;
+}
+
+/* -----------------------------------------------------------
+   PAGE SECTIONS
+----------------------------------------------------------- */
+section {
+  background-color: var(--panel);
+  border: 3px solid var(--muted);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 30px auto;
+  max-width: var(--max-width);
+  color: var(--text-dark);
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+section h1,
+section h2,
+section h3,
+section h4 {
+  font-family: "Playfair Display", serif;
+  color: var(--bg-accent);
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+/* -----------------------------------------------------------
+   FOOTER
+----------------------------------------------------------- */
+.site-footer {
+  text-align: center;
+  padding: 20px;
+  color: var(--accent);
+  font-family: "Playfair Display", serif;
+  background-color: var(--bg-accent);
+  border-top: 3px solid var(--accent);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+.site-footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.site-footer a:hover,
+.site-footer a:focus-visible {
+  text-decoration: underline;
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+
+/* -----------------------------------------------------------
+   REDUCED MOTION
+----------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* -----------------------------------------------------------
+   RESPONSIVE
+----------------------------------------------------------- */
+@media (max-width: 520px) {
+  .gallery-item img {
+    height: 160px;
+  }
+
+  .site-nav > ul {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+}

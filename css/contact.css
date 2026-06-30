@@ -1,0 +1,39 @@
+h2 a{
+  color: black;;
+  text-decoration: none;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+h2 a:hover,
+h2 a:focus-visible {
+  color: white;
+  text-shadow: 0 0 8px var(--accent);
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+.cta {
+  background-color: var(--bg-accent);
+  color: var(--accent);
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.cta:hover,
+.cta:focus-visible {
+  background-color: var(--bg-dark);
+  transform: translateY(-2px);
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+
+.cta.secondary {
+  background-color: var(--muted);
+  color: var(--text-light);
+}

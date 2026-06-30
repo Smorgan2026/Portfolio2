@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/projects.css" />
+  <script src="js/script.js" defer></script>
+  <title>Projects — Shannon Morgan</title>
+</head>
+<body>
+  <a class="skip-link" href="#gallery">Skip to gallery</a>
+  <nav class="site-nav" role="navigation" aria-label="Main">
+      <ul>
+        <li><a href="../index.html">Home Page</a></li>
+        <li class="dropdown">
+          <button class="dropdown-btn" aria-haspopup="true" aria-expanded="false">
+            About ▾
+          </button>
+          <ul class="dropdown-menu" aria-label="About submenu">
+            <li><a href="pages/about.html">About Me</a></li>
+            <li><a href="#interests">Interests</a></li>
+            <li><a href="#goals">Goals</a></li>
+          </ul>
+        </li>
+        <li><a href="pages/projects.html">Projects</a></li>
+        <li><a href="pages/contact.html">Contact</a></li>
+      </ul>
+  </nav>
+  <main id="gallery" tabindex="-1">
+    <h3 class="site-title">Projects</h3>
+    <p class="lead site-subtitle">Click on any item to open details.</p>
+    <section class="gallery-grid" role="list" aria-label="Project gallery">
+      <!-- Each item is a figure with a link that opens a modal. Provide descriptive alt text. -->
+      <figure class="gallery-item" role="listitem">
+        <a href="https://drive.google.com/file/d/1n4bmOqc2LDDrTuS00mMspS35z5Bu5Xh9/view?usp=sharing"
+           data-title="Morgan Multiwear Collection"
+           data-description="A collection of photos showcasing Morgan Multiwear."
+           class="project-link" target="_blank" rel="noopener">
+          <img src="https://i.postimg.cc/cHvV9cn2/1.png" alt="Morgan Multiwear collection preview" />
+          <figcaption><span class="visually-hidden">Project:</span> Morgan Multiwear</figcaption>
+        </a>
+      </figure>
+
+      <figure class="gallery-item" role="listitem">
+        <a href="https://drive.google.com/file/d/1Wimh2O4aP6R6FJPy7dkTnzBXHya_GWA1/view?usp=drive_link"
+           data-title="Colored In Confidence Collection"
+           data-description="A collection of moodboard images with neutral tones and a confidence quote."
+           class="project-link" target="_blank" rel="noopener">
+          <img src="https://i.postimg.cc/RZbghS7n/1695601528469-4214fa12-24f6-48dd-a45e-11fb1746c152-3.jpg" alt="Moodboard preview" />
+          <figcaption><span class="visually-hidden">Project:</span> Colored In Confidence</figcaption>
+        </a>
+      </figure>
+
+      <figure class="gallery-item" role="listitem">
+        <a href="https://smorgan2026.github.io/player-card-website/"
+           data-title="Player Card Website"
+           data-description="A web project showcasing player cards."
+           class="project-link" target="_blank" rel="noopener">
+          <img src="images/biblicalcards.jpeg" alt="Player card website screenshot" />
+          <figcaption><span class="visually-hidden">Project:</span> Player Card</figcaption>
+        </a>
+      </figure>
+
+      <figure class="gallery-item" role="listitem">
+        <a href="https://smorgan2026.github.io/pizza-builder-menu/"
+           data-title="Interactive Pizza Builder"
+           data-description="Interactive pizza builder project."
+           class="project-link" target="_blank" rel="noopener">
+          <img src="images/pizza-builder-image.jpeg" alt="Interactive pizza builder preview" />
+          <figcaption><span class="visually-hidden">Project:</span> Pizza Builder</figcaption>
+        </a>
+      </figure>
+
+      <figure class="gallery-item" role="listitem">
+        <a href="https://smorgan2026.github.io/magazine-cover/"
+           data-title="Magazine Cover Design"
+           data-description="A modern magazine cover design project."
+           class="project-link" target="_blank" rel="noopener">
+          <img src="images/JesusLovesYouMagazine.jpeg" alt="Magazine cover preview" />
+          <figcaption><span class="visually-hidden">Project:</span> Magazine Cover</figcaption>
+        </a>
+      </figure>
+
+      <figure class="gallery-item" role="listitem">
+        <a href="https://smorgan2026.github.io/weather-app/"
+           data-title="Weather App"
+           data-description="A simple weather application project."
+           class="project-link" target="_blank" rel="noopener">
+          <img src="images/weather-app-image.jpeg" alt="Weather app preview" />
+          <figcaption><span class="visually-hidden">Project:</span> Weather App</figcaption>
+        </a>
+      </figure>
+    </section>
+
+    <!-- Accessible modal for quick previews (JS-controlled) -->
+    <div id="project-modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-title">
+      <div class="modal-content">
+        <button class="modal-close" aria-label="Close preview">&times;</button>
+        <h4 id="modal-title"></h4>
+        <p id="modal-desc"></p>
+        <p><a id="modal-link" class="modal-open-link" href="#" target="_blank" rel="noopener">Open project</a></p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <p><a href="../index.html">Back to Home</a></p>
+  </footer>
+</body>
+</html>

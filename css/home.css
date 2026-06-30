@@ -1,0 +1,55 @@
+/* -----------------------------------------------------------
+   HOME INTRO SECTION
+----------------------------------------------------------- */
+.home-intro {
+  background-color: var(--panel);
+  border: 3px solid var(--muted);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: var(--max-width);
+  color: var(--text-dark);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+.home-intro h2 {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  color: var(--bg-accent);
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.home-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.cta {
+  background-color: var(--bg-accent);
+  color: var(--accent);
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.cta:hover,
+.cta:focus-visible {
+  background-color: var(--bg-dark);
+  transform: translateY(-2px);
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+
+.cta.secondary {
+  background-color: var(--muted);
+  color: var(--text-light);
+}
